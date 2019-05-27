@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: yaprigalexpressaks 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: yaprigalexpressaks 
+    spec:
+      containers:
+        - name: yaprigalexpressaks 
+          image: prigalregistry.azurecr.io/yaprigalexpressaks 
+          ports:
+          - containerPort: 3000
